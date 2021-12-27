@@ -1,0 +1,226 @@
+doctype
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="description" content="this our bd3")
+        meta(name="keywords" , content="bd3")
+        title HTML Template
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        link(rel="stylesheet", href="css/all.min.css")
+        link(rel="stylesheet", href="css/normaliz.css")
+        link(rel="stylesheet", href="css/style.css")
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+    body
+        header#header.trans
+            .container
+                .main-header
+                    .logo
+                        a(href="#") logo
+                    .links
+                        ul
+                            each val in ["Home","About","Portfolio","Services","Prices","Team","Blog","Contact"]
+                                if(val === "Blog")
+                                    li(class="blogp")
+                                        a(href="#"+val)=val
+                                            span.drop= " >"
+                                        ul(class="blogpost")
+                                            li
+                                                a(href="https://preview.colorlib.com/theme/creative-agency/index.html?" target="_blank") blog post
+                                else
+                                    li
+                                        a(href="#"+val)=val
+        .landing#Home
+            .box
+                h1 we are creative agency
+                p Morbi mattis felis at nunc. Duis viverra diam non justo. In nisl. Nullam sit amet magna in magna gravida vehicula. Mauris tincidunt sem sed arcu. Nunc posuere.
+                .buttons
+                    each val ,i in ["get started!","learn more"]
+                        button(class="btn")=val
+        .welcome#About
+            .container
+                .main-welcome
+                    .head-welcome
+                        h2.title welcome to website
+                    .boxs-welcome
+                        -let welcomeicons=["fa fa-cogs","fa fa-magic","fa fa-mobile"]
+                        -let welcometext=["Fully Customizible","Awesome Features","Fully Responsive"]
+                        - for(let i = 0;i<3;i++)
+                            .box-welcome
+                                i(class=welcomeicons[i])
+                                h3= welcometext[i]
+                                p Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.
+                                span Read More
+        .featured#Portfolio
+            .container
+                .mian-featured
+                    .head-featured
+                        h2.title featured works
+                    .boxs-featured
+                        - for(let i = 1; i<7;i++)
+                            .box-featured
+                                img(src="image/images/work/work"+i+".webp", alt="work"+i)
+                                .after
+                                    .text-after
+                                        span category
+                                        h5 lorem ipsum dolor
+                                        i(class="fas fa-external-link-alt")
+                                        i(class="fa fa-search")
+        .services#Services
+            .container
+                .main-services
+                    .head-services
+                        h2.title what we offer
+                    .boxs-services
+                        -let servicesicons=["far fa-gem","fa fa-rocket","fa fa-cogs","far fa-gem","fas fa-pencil-alt","fa fa-flask"];
+                        -let servicestitle=["App Development","Graphic Design","Creative Idea","Marketing","Awesome Support","Brand Design"];
+                        each val,i in servicesicons
+                            .box-services
+                                i(class=val)
+                                .text-services
+                                    h3=servicestitle[i]
+                                    p Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero.
+        .after-services
+            .container
+                .main-after
+                    .text-after
+                        h3 why choose us
+                        p.parent Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris. Ultrices sagittis orci a scelerisque purus.
+                        -let ps=["Quis varius quam quisque id diam vel quam elementum.","Mauris augue neque gravida in fermentum.","Orci phasellus egestas tellus rutrum.","Nec feugiat nisl pretium fusce id velit ut tortor pretium."];
+                        each val in ps
+                            p.child
+                                i(class="fa fa-check")
+                                .
+                                    #{val}
+                    .img-box
+                        i(class="fa fa-angle-left")
+                        img(src="image/images/about/about1.webp", alt="")
+                        i(class="fa fa-angle-right")
+        .number-services
+            .boxs-number
+                -let numbericons=["fa fa-users","fa fa-trophy","fa fa-coffee","fa fa-file"];
+                -let numbers=["451","12","154K","45"];
+                -let numbertitle=["Happy clients","Awards won","Cups of Coffee","Projects completed"]
+                each val,ind in numbers
+                    .box-number
+                        i(class=numbericons[ind])
+                        h4.num=val
+                        h6.title=numbertitle[ind]
+        .price#Prices
+            .container
+                .main-price
+                    .head-price
+                        h2.title Pricing Table
+                    .boxs-price
+                        -let plans=["basic plan","silver plan","gold plan"]
+                        -let price=["9","19","39"]
+                        each val,ind in price
+                            .box-price
+                                span.pl=plans[ind]
+                                .radios
+                                    h6="$"+val
+                                        br
+                                        span="/MONTH"
+                                span 1GB Disk Space
+                                span 100 Email Account
+                                span 24/24 support
+                                button Purchase Now
+        .price-section
+            .container
+                .boxs-section
+                    -for(let i =1;i<3;i++)
+                        .box-section
+                            .top
+                                img(src="image/images/team/team"+i+".webp", alt="")
+                                .text
+                                    h6 John Doe
+                                    span web designer
+                            .bot
+                                p Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.
+        .team#Team
+            .container
+                .main-team
+                    .head-team
+                        .h2.title our team
+                    .boxs-team
+                        -for(let i = 1;i<=3;i++)
+                            .box-team
+                                img(src="image/images/team/team"+i+".webp", alt="")
+                                .overlay
+                                    -let icons=["fab fa-facebook-f","fab fa-google-plus-g","fab fa-twitter"]
+                                    each val in icons
+                                        i(class=val)
+                                .info
+                                    h4.title jone doe
+                                    span WEB DESIGNER
+        .blog#Blog
+            .container
+                .main-blog
+                    .head-blog
+                        h2.title Recents News
+                    .boxs-blog
+                        -for(let i = 1;i<=3;i++)
+                            .box-blog
+                                img(src="image/images/blog/blog"+i+".webp", alt="")
+                                .content-blog
+                                    ul.blog-meta
+                                        -let icons=["fa fa-user","far fa-clock","fa fa-comments"];
+                                        -let nameicons=["John doe","18 Oct","57"]
+                                        each val,ind in icons
+                                            li
+                                                i(class=val)
+                                                .
+                                                    #{nameicons[ind]}
+                                    h3.title-content Molestie at elementum eu facilisis sed odio
+                                    p Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.
+                                    span Read more
+        .contact#Contact
+            .container
+                .main-contact
+                    .head-contact
+                        h2.title Get In Touch
+                    .boxs-contact
+                            -let contacticons=["fas fa-phone-alt","fa fa-envelope","fas fa-map-marker-alt"];
+                            -let contacts=["Phone","Email","Address"];
+                            -let contactsspan=["0102-042-4314","ahmdhusam7@gamil.com","1996 Ad Daqahliyah, Egypt"]
+                            each val,ind in contacticons
+                                .box-contact
+                                    i(class=val,id=contacts[ind])
+                                    h5.title=contacts[ind]
+                                    span=contactsspan[ind]
+                    form.form-contact(method="post")
+                        -let placeholders=["Name","Email","Subject","Message"]
+                        each val in placeholders
+                            -if(val ==="Message")
+                                textarea(placeholder=val , class=val , name=val , required)
+                            -else if(val === "Email")
+                                input(type="email" , placeholder=val , class=val , name=val , required)
+                            -else
+                                input(type="text" , placeholder=val , class=val , name=val , required)
+                        input(type="submit" value="Send message",class="send")
+        footer
+            .container
+                .main-footer
+                    .head-footer
+                        h2.title logo
+                    .main-footer
+                        -let footericons=["fab fa-facebook-f","fab fa-twitter","fab fa-google-plus-g","fab fa-instagram","fab fa-linkedin-in","fab fa-youtube"];
+                        -let iconstarget=["facebook","twitter","#","instgram","linkedin","#"];
+                        ul.icons
+                            each val,ind in footericons
+                                li
+                                    -if(iconstarget[ind]==="#")
+                                        a(href=iconstarget[ind])
+                                            i(class=val)
+                                    -else if(iconstarget[ind] ==="linkedin")
+                                        a(href="https://"+iconstarget[ind]+".com/in/ahmdhusam",target="_blank")
+                                            i(class=val)
+                                    -else
+                                        a(href="https://"+iconstarget[ind]+".com/ahmdhusam",target="_blank") 
+                                            i(class=val)
+                        p COPYRIGHT 
+                            span © 2021
+        #gotop
+            a(href="#")
+                i(class="fas fa-arrow-up")
+        script(src="js/script.js")
