@@ -1,0 +1,126 @@
+header {
+    background-color: #eeeeee;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0%;
+    transition: padding 0.2s, background-color 0.2s;
+
+    &.trans {
+        background-color: transparent;
+        padding: 8px 0px;
+        .main-header {
+            .logo {
+                a {
+                    color: white;
+                }
+            }
+            .links {
+                ul {
+                    li {
+                        a {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            a {
+                padding: 5px;
+                display: block;
+                font-size: 30px;
+                font-weight: bold;
+                color: black;
+                text-transform: uppercase;
+            }
+        }
+
+        .links {
+            svg {
+                width: 2.5rem;
+                height: 2.5rem;
+                color: white;
+
+                @include md {
+                    display: none;
+                }
+            }
+
+            > ul {
+                display: none;
+
+                @include md {
+                    display: block;
+                }
+
+                > li {
+                    display: inline-block;
+                    padding: 0px 10px;
+                    > a {
+                        display: block;
+                        font-size: 14px;
+                        padding: 16px 1px;
+                        color: black;
+                        position: relative;
+                        &::after {
+                            content: "";
+                            background-color: $maincolor;
+                            width: 0%;
+                            height: 2px;
+                            position: absolute;
+                            bottom: 20%;
+                            left: 0%;
+                            transition: width 0.3s;
+                        }
+                        &:hover,
+                        &.active {
+                            color: $maincolor;
+                            opacity: 0.7;
+                        }
+                        &:hover::after,
+                        &.active::after {
+                            width: 100%;
+                        }
+                    }
+                }
+                .blogp {
+                    position: relative;
+
+                    &:hover .blogpost {
+                        opacity: 1;
+                        visibility: visible;
+                        top: 100%;
+                        left: -80%;
+                    }
+                    .drop {
+                        font-size: 13px;
+                    }
+                    .blogpost {
+                        opacity: 0;
+                        visibility: hidden;
+                        width: 150px;
+                        position: absolute;
+                        top: 110%;
+                        left: -75%;
+                        background-color: $maincolor;
+                        transition: top 0.3s, left 0.3s, opacity 0.2s;
+                        a {
+                            display: block;
+                            padding: 10px 15px;
+                            color: white;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

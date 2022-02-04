@@ -1,0 +1,101 @@
+@import "./variables";
+
+@mixin sm() {
+    @media (min-width: map-get($screenWidth,"sm")) {
+        @content;
+    }
+}
+@mixin md() {
+    @media (min-width: map-get($screenWidth,"md")) {
+        @content;
+    }
+}
+
+@mixin lg() {
+    @media (min-width: map-get($screenWidth,"lg")) {
+        @content;
+    }
+}
+
+@mixin xl() {
+    @media (min-width: map-get($screenWidth,"xl")) {
+        @content;
+    }
+}
+
+@mixin parent-with-shadow() {
+    background-color: $secnd-color;
+    padding: $parent-padding;
+    box-shadow: 0 0 2px 0;
+}
+
+@mixin parent-without-shadow {
+    padding: $parent-padding;
+}
+
+@mixin layout($rgp) {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(0, 0, 0, $rgp);
+}
+
+@mixin head() {
+    margin-bottom: 100px;
+    .title {
+        width: 50%;
+        margin: auto;
+        text-transform: capitalize;
+        text-align: center;
+        color: black;
+        font-size: 35px;
+        word-spacing: 10px;
+        position: relative;
+        font-weight: bold;
+        &::after {
+            content: "";
+            background-color: #6195ff;
+            width: 40px;
+            height: 4px;
+            position: absolute;
+            left: 50%;
+            bottom: -40%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+@mixin background($dir) {
+    background-color: #1c1d21;
+    position: absolute;
+    z-index: -1;
+
+    @if ($dir == "top") {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 0%;
+        transition: height 0.2s;
+    } @else if($dir == "left") {
+        left: 0%;
+        top: 0%;
+        width: 0%;
+        height: 100%;
+        transition: width 0.2s;
+    }
+}
+
+@mixin img-bullet($left) {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    bottom: -20px;
+    left: $left;
+    transform: translate(-50%, -50%);
+    border: 0.5px $maincolor solid;
+}

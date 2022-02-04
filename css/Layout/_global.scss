@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    font-family: "Montserrat", "sans-serif";
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+button {
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+body {
+    background-color: black;
+    > div:not(.landing),
+    footer {
+        display: none;
+    }
+}
