@@ -1,0 +1,53 @@
+.welcome {
+    @include parent-without-shadow();
+    .main-welcome {
+        .head-welcome {
+            @include head;
+        }
+        .boxs-welcome {
+            display: grid;
+            gap: 1.5rem;
+
+            @include sm {
+                grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+            }
+
+            .box-welcome {
+                padding: 50px 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                gap: 20px;
+                text-align: center;
+                box-shadow: $shadow-box;
+                position: relative;
+                i {
+                    font-size: 30px;
+                    color: $maincolor;
+                }
+                h3 {
+                    font-size: 23px;
+                }
+                p {
+                    color: $main-P;
+                    line-height: 1.6;
+                }
+                span {
+                    color: $maincolor;
+                    cursor: pointer;
+                }
+                &::after {
+                    content: "";
+                    @include background("left");
+                }
+                &:hover::after {
+                    width: 100%;
+                }
+                &:hover h3 {
+                    color: white;
+                }
+            }
+        }
+    }
+}

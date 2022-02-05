@@ -23,10 +23,7 @@ button:hover {
   opacity: 0.9;
 }
 
-body {
-  background-color: black;
-}
-body > div:not(.landing),
+body > div:not(.landing, .welcome),
 body footer {
   display: none;
 }
@@ -174,8 +171,14 @@ header .main-header .links > ul .blogp .blogpost a {
   }
 }
 .landing .box p {
+  font-size: 0.8rem;
   line-height: 1.6;
   margin-bottom: 1.2rem;
+}
+@media (min-width: 768px) {
+  .landing .box p {
+    font-size: 1rem;
+  }
 }
 .landing .box .buttons > button {
   padding: 0.3rem 0.6rem;
@@ -229,11 +232,11 @@ header .main-header .links > ul .blogp .blogpost a {
 }
 .welcome .main-welcome .boxs-welcome {
   display: grid;
-  gap: 20px;
+  gap: 1.5rem;
 }
-@media (min-width: 992px) {
+@media (min-width: 600px) {
   .welcome .main-welcome .boxs-welcome {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   }
 }
 .welcome .main-welcome .boxs-welcome .box-welcome {

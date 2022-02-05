@@ -51,10 +51,14 @@
         text-transform: capitalize;
         text-align: center;
         color: black;
-        font-size: 35px;
-        word-spacing: 10px;
+        font-size: 1.5rem;
+        word-spacing: 0.8rem;
         position: relative;
-        font-weight: bold;
+
+        @include md {
+            font-size: 2rem;
+        }
+
         &::after {
             content: "";
             background-color: #6195ff;

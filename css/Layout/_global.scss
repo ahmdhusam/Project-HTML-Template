@@ -26,8 +26,7 @@ button {
 }
 
 body {
-    background-color: black;
-    > div:not(.landing),
+    > div:not(.landing, .welcome),
     footer {
         display: none;
     }
