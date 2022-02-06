@@ -26,7 +26,7 @@ button {
 }
 
 body {
-    > div:not(.landing, .welcome),
+    > div:not(.landing, .welcome, .featured, .services, .after-services),
     footer {
         display: none;
     }

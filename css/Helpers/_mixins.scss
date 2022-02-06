@@ -23,6 +23,10 @@
     }
 }
 
+@mixin autofill($min: 18rem) {
+    grid-template-columns: repeat(auto-fill, minmax($min, 1fr));
+}
+
 @mixin parent-with-shadow() {
     background-color: $secnd-color;
     padding: $parent-padding;
