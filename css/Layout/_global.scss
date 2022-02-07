@@ -26,7 +26,7 @@ button {
 }
 
 body {
-    > div:not(.landing, .welcome, .featured, .services, .after-services),
+    > div:not(.landing, .welcome, .featured, .services, .after-services, .number-services, .price),
     footer {
         display: none;
     }

@@ -1,0 +1,72 @@
+.price {
+    @include parent-without-shadow();
+    .main-price {
+        .head-price {
+            @include head();
+        }
+        .boxs-price {
+            display: grid;
+            @include autofill;
+            gap: 15px;
+            .box-price {
+                padding: 50px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 30px;
+                box-shadow: $shadow-box;
+                position: relative;
+                transition: transform 0.3s;
+                &::after {
+                    content: "";
+                    @include background("top");
+                }
+                &:hover::after {
+                    height: 100%;
+                }
+                &:hover .radios {
+                    color: white;
+                }
+                &:hover .pl {
+                    color: $maincolor;
+                }
+                &:hover {
+                    transform: translateY(-20px);
+                }
+                span {
+                    color: $main-P;
+                }
+                .pl {
+                    text-transform: uppercase;
+                }
+                .radios {
+                    width: 140px;
+                    height: 140px;
+                    border: $maincolor solid 2px;
+                    border-radius: 50%;
+                    position: relative;
+                    h6 {
+                        position: absolute;
+                        left: 50%;
+                        top: 60%;
+                        transform: translate(-50%, -50%);
+                        font-size: 40px;
+                        span {
+                            font-size: 15px;
+                            position: relative;
+                            top: -22px;
+                        }
+                    }
+                }
+                button {
+                    padding: 15px 30px;
+                    border: $maincolor solid 2px;
+                    border-radius: 5px;
+                    background-color: transparent;
+                    color: $maincolor;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

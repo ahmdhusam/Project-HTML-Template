@@ -23,7 +23,7 @@ button:hover {
   opacity: 0.9;
 }
 
-body > div:not(.landing, .welcome, .featured, .services, .after-services),
+body > div:not(.landing, .welcome, .featured, .services, .after-services, .number-services, .price),
 body footer {
   display: none;
 }
@@ -570,8 +570,9 @@ header .main-header .links > ul .blogp .blogpost a {
 .number-services .boxs-number {
   position: relative;
   z-index: 3;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  gap: 2rem;
 }
 .number-services .boxs-number .box-number {
   text-align: center;
@@ -635,12 +636,8 @@ header .main-header .links > ul .blogp .blogpost a {
 }
 .price .main-price .boxs-price {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   gap: 15px;
-}
-@media (min-width: 992px) {
-  .price .main-price .boxs-price {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 .price .main-price .boxs-price .box-price {
   padding: 50px;

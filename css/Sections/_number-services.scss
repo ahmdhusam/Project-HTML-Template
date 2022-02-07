@@ -1,0 +1,38 @@
+.number-services {
+    padding: 50px;
+    position: relative;
+    z-index: 1;
+    background-image: url(../image/images/background/background2.webp);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    .boxs-number {
+        position: relative;
+        z-index: 3;
+        display: grid;
+        @include autofill(13rem);
+        gap: 2rem;
+        .box-number {
+            text-align: center;
+            padding: 10px;
+            i {
+                color: #6195ff;
+                font-size: 35px;
+                margin-bottom: 25px;
+            }
+            .num {
+                font-size: 45px;
+                color: white;
+                margin-bottom: 25px;
+            }
+            .title {
+                font-size: 13px;
+                color: white;
+            }
+        }
+    }
+    &::after {
+        @include layout(0.7);
+        z-index: 2;
+    }
+}
