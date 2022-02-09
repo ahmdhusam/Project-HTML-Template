@@ -33,14 +33,14 @@ html(lang="en")
                                 else
                                     li
                                         a(href="#"+val)=val
-        .landing#Home
+        #Home
             .box
                 h1 we are creative agency
                 p Morbi mattis felis at nunc. Duis viverra diam non justo. In nisl. Nullam sit amet magna in magna gravida vehicula. Mauris tincidunt sem sed arcu. Nunc posuere.
                 .buttons
                     each val ,i in ["get started!","learn more"]
                         button(class="btn")=val
-        .welcome#About
+        #About
             .container
                 .main-welcome
                     .head-welcome
@@ -54,7 +54,7 @@ html(lang="en")
                                 h3= welcometext[i]
                                 p Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.
                                 span Read More
-        .featured#Portfolio
+        #Portfolio
             .container
                 .mian-featured
                     .head-featured
@@ -69,7 +69,7 @@ html(lang="en")
                                         h5 lorem ipsum dolor
                                         i(class="fas fa-external-link-alt")
                                         i(class="fa fa-search")
-        .services#Services
+        #Services
             .container
                 .main-services
                     .head-services
@@ -109,14 +109,14 @@ html(lang="en")
                         i(class=numbericons[ind])
                         h4.num=val
                         h6.title=numbertitle[ind]
-        .price#Prices
+        #Prices
             .container
                 .main-price
                     .head-price
                         h2.title Pricing Table
                     .boxs-price
                         -let plans=["basic plan","silver plan","gold plan"]
-                        -let price=["9","19","39"]
+                        -let price=["09","19","39"]
                         each val,ind in price
                             .box-price
                                 span.pl=plans[ind]
@@ -128,7 +128,7 @@ html(lang="en")
                                 span 100 Email Account
                                 span 24/24 support
                                 button Purchase Now
-        .price-section
+        #testimonial
             .container
                 .boxs-section
                     -for(let i =1;i<3;i++)

@@ -1,4 +1,4 @@
-.price {
+#Prices {
     @include parent-without-shadow();
     .main-price {
         .head-price {
@@ -7,7 +7,7 @@
         .boxs-price {
             display: grid;
             @include autofill;
-            gap: 15px;
+            gap: 1.5rem;
             .box-price {
                 padding: 50px;
                 display: flex;
@@ -21,17 +21,21 @@
                     content: "";
                     @include background("top");
                 }
-                &:hover::after {
-                    height: 100%;
-                }
-                &:hover .radios {
-                    color: white;
-                }
-                &:hover .pl {
-                    color: $maincolor;
-                }
+
                 &:hover {
-                    transform: translateY(-20px);
+                    transform: translateY(-1rem);
+
+                    &::after {
+                        height: 100%;
+                    }
+
+                    .radios {
+                        color: white;
+                    }
+
+                    .pl {
+                        color: $maincolor;
+                    }
                 }
                 span {
                     color: $main-P;

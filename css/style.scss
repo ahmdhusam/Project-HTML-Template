@@ -10,55 +10,8 @@
 @import "Sections/featured";
 @import "Sections/number-services";
 @import "Sections/prices";
+@import "Sections/testimonial";
 
-.price-section {
-    padding: 100px;
-    background-image: url(../image/images/background/background3.webp);
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-    z-index: 1;
-    &::after {
-        @include layout(0.7);
-        z-index: 2;
-    }
-    .boxs-section {
-        position: relative;
-        z-index: 3;
-        display: grid;
-        @include lg {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        gap: 30px;
-        .box-section {
-            .top {
-                display: flex;
-                gap: 20px;
-                img {
-                    width: 70px;
-                    height: 70px;
-                    border-radius: 50%;
-                }
-                .text {
-                    font-size: 30px;
-                    color: white;
-                    line-height: 0.7;
-                    margin-top: 13px;
-                    span {
-                        margin-top: -10px;
-                        color: $maincolor;
-                        font-size: 20px;
-                    }
-                }
-            }
-            .bot {
-                color: white;
-                margin-top: 20px;
-                line-height: 1.7;
-            }
-        }
-    }
-}
 .team {
     @include parent-without-shadow();
     .main-team {
