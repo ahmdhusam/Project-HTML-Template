@@ -11,72 +11,8 @@
 @import "Sections/number-services";
 @import "Sections/prices";
 @import "Sections/testimonial";
+@import "Sections/team";
 
-.team {
-    @include parent-without-shadow();
-    .main-team {
-        .head-team {
-            @include head();
-            margin-top: 0;
-        }
-        .boxs-team {
-            display: grid;
-            @include lg {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            column-gap: 20px;
-            .box-team {
-                padding: 30px 10px;
-                background-color: #eee;
-                position: relative;
-                &:hover .overlay {
-                    height: 100%;
-                    z-index: 0;
-                }
-                &:hover .info .title {
-                    color: white;
-                }
-                &:hover .info span {
-                    color: $maincolor;
-                }
-                .overlay {
-                    padding: inherit;
-                    @include background("top");
-                    background-color: rgba(0, 0, 0, 0.8);
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-end;
-                    i {
-                        padding: 15px 0;
-                        width: 50px;
-                        height: 50px;
-                        color: white;
-                        background-color: $maincolor;
-                        cursor: pointer;
-                        text-align: center;
-                        &:hover {
-                            opacity: 0.8;
-                        }
-                    }
-                }
-                .info {
-                    position: relative;
-                    z-index: 1;
-                    padding: 20px;
-                    text-align: center;
-                    .title {
-                        font-size: 20px;
-                        text-transform: capitalize;
-                        margin-bottom: 10px;
-                    }
-                    span {
-                        color: $main-P;
-                    }
-                }
-            }
-        }
-    }
-}
 .blog {
     @include parent-with-shadow();
     .main-blog {

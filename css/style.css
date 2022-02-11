@@ -23,7 +23,7 @@ button:hover {
   opacity: 0.9;
 }
 
-body > div:not(#Home, #About, #Portfolio, #Services, .after-services, .number-services, #Prices, #testimonial),
+body > div:not(#Home, #About, #Portfolio, #Services, .after-services, .number-services, #Prices, #testimonial, #Team),
 body footer {
   display: none;
 }
@@ -761,14 +761,14 @@ header .main-header .links > ul .blogp .blogpost a {
   line-height: 1.7;
 }
 
-.team {
+#Team {
   padding: 150px 0px;
 }
-.team .main-team .head-team {
+#Team .main-team .head-team {
   margin-bottom: 100px;
   margin-top: 0;
 }
-.team .main-team .head-team .title {
+#Team .main-team .head-team .title {
   width: 50%;
   margin: auto;
   text-transform: capitalize;
@@ -779,11 +779,11 @@ header .main-header .links > ul .blogp .blogpost a {
   position: relative;
 }
 @media (min-width: 768px) {
-  .team .main-team .head-team .title {
+  #Team .main-team .head-team .title {
     font-size: 2rem;
   }
 }
-.team .main-team .head-team .title::after {
+#Team .main-team .head-team .title::after {
   content: "";
   background-color: #6195ff;
   width: 40px;
@@ -793,31 +793,36 @@ header .main-header .links > ul .blogp .blogpost a {
   bottom: -40%;
   transform: translate(-50%, -50%);
 }
-.team .main-team .boxs-team {
+#Team .main-team .boxs-team {
   display: grid;
-  column-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 1.2rem;
 }
-@media (min-width: 992px) {
-  .team .main-team .boxs-team {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-.team .main-team .boxs-team .box-team {
+#Team .main-team .boxs-team .box-team {
   padding: 30px 10px;
   background-color: #eee;
   position: relative;
 }
-.team .main-team .boxs-team .box-team:hover .overlay {
+#Team .main-team .boxs-team .box-team:hover .overlay {
   height: 100%;
   z-index: 0;
 }
-.team .main-team .boxs-team .box-team:hover .info .title {
+#Team .main-team .boxs-team .box-team:hover .info .title {
   color: white;
 }
-.team .main-team .boxs-team .box-team:hover .info span {
+#Team .main-team .boxs-team .box-team:hover .info span {
   color: #6195ff;
 }
-.team .main-team .boxs-team .box-team .overlay {
+#Team .main-team .boxs-team .box-team .image {
+  overflow: hidden;
+}
+#Team .main-team .boxs-team .box-team .image img {
+  border-radius: 1rem;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+#Team .main-team .boxs-team .box-team .overlay {
   padding: inherit;
   background-color: #1c1d21;
   position: absolute;
@@ -832,7 +837,7 @@ header .main-header .links > ul .blogp .blogpost a {
   flex-direction: column;
   align-items: flex-end;
 }
-.team .main-team .boxs-team .box-team .overlay i {
+#Team .main-team .boxs-team .box-team .overlay i {
   padding: 15px 0;
   width: 50px;
   height: 50px;
@@ -841,21 +846,21 @@ header .main-header .links > ul .blogp .blogpost a {
   cursor: pointer;
   text-align: center;
 }
-.team .main-team .boxs-team .box-team .overlay i:hover {
+#Team .main-team .boxs-team .box-team .overlay i:hover {
   opacity: 0.8;
 }
-.team .main-team .boxs-team .box-team .info {
+#Team .main-team .boxs-team .box-team .info {
   position: relative;
   z-index: 1;
   padding: 20px;
   text-align: center;
 }
-.team .main-team .boxs-team .box-team .info .title {
+#Team .main-team .boxs-team .box-team .info .title {
   font-size: 20px;
   text-transform: capitalize;
   margin-bottom: 10px;
 }
-.team .main-team .boxs-team .box-team .info span {
+#Team .main-team .boxs-team .box-team .info span {
   color: rgba(128, 128, 128, 0.8);
 }
 

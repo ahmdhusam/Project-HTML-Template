@@ -26,7 +26,7 @@ button {
 }
 
 body {
-    > div:not(#Home, #About, #Portfolio, #Services, .after-services, .number-services, #Prices, #testimonial),
+    > div:not(#Home, #About, #Portfolio, #Services, .after-services, .number-services, #Prices, #testimonial, #Team),
     footer {
         display: none;
     }

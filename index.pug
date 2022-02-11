@@ -140,7 +140,7 @@ html(lang="en")
                                     span web designer
                             .bot
                                 p Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.
-        .team#Team
+        #Team
             .container
                 .main-team
                     .head-team
@@ -148,7 +148,8 @@ html(lang="en")
                     .boxs-team
                         -for(let i = 1;i<=3;i++)
                             .box-team
-                                img(src="image/images/team/team"+i+".webp", alt="")
+                                .image
+                                    img(src="image/images/team/team"+i+".webp", alt="team"+i)
                                 .overlay
                                     -let icons=["fab fa-facebook-f","fab fa-google-plus-g","fab fa-twitter"]
                                     each val in icons
