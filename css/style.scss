@@ -12,64 +12,8 @@
 @import "Sections/prices";
 @import "Sections/testimonial";
 @import "Sections/team";
+@import "Sections/blog";
 
-.blog {
-    @include parent-with-shadow();
-    .main-blog {
-        .head-blog {
-            @include head();
-        }
-        .boxs-blog {
-            display: grid;
-            @include lg {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            column-gap: 30px;
-            .box-blog {
-                background-color: white;
-                img {
-                    width: 100%;
-                }
-                .content-blog {
-                    padding: 20px;
-                    > *:not(:last-child) {
-                        margin-bottom: 20px;
-                    }
-                    .blog-meta {
-                        li {
-                            display: inline-block;
-                            font-family: "Varela Round", "sans-serif";
-                            i {
-                                color: $maincolor;
-                                margin-right: 5px;
-                                font-size: 13px;
-                            }
-                        }
-                        li:not(:last-child) {
-                            margin-right: 15px;
-                        }
-                    }
-                    .title-content {
-                        font-size: 20px;
-                    }
-                    p {
-                        color: $main-P;
-                        line-height: 1.6;
-                        word-break: break-word;
-                        font-size: 15px;
-                    }
-                    span {
-                        color: $maincolor;
-                        cursor: pointer;
-                        &:hover {
-                            opacity: 0.8;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
 .contact {
     @include parent-without-shadow();
     .main-contact {

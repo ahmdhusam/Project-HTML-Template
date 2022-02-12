@@ -1,0 +1,62 @@
+#Blog {
+    @include parent-with-shadow();
+    .main-blog {
+        .head-blog {
+            @include head();
+        }
+        .boxs-blog {
+            display: grid;
+            @include autofill(17rem);
+            gap: 2rem;
+
+            .box-blog {
+                background-color: white;
+                .image {
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+
+                .content-blog {
+                    padding: 20px;
+                    > *:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+
+                    .blog-meta {
+                        li {
+                            display: inline-block;
+                            font-family: "Varela Round", "sans-serif";
+                            i {
+                                color: $maincolor;
+                                margin-right: 5px;
+                                font-size: 13px;
+                            }
+                        }
+                        li:not(:last-child) {
+                            margin-right: 15px;
+                        }
+                    }
+                    .title-content {
+                        font-size: 20px;
+                    }
+                    p {
+                        color: $main-P;
+                        line-height: 1.6;
+                        word-break: break-word;
+                        font-size: 15px;
+                    }
+                    span {
+                        color: $maincolor;
+                        cursor: pointer;
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -157,7 +157,7 @@ html(lang="en")
                                 .info
                                     h4.title jone doe
                                     span WEB DESIGNER
-        .blog#Blog
+        #Blog
             .container
                 .main-blog
                     .head-blog
@@ -165,7 +165,8 @@ html(lang="en")
                     .boxs-blog
                         -for(let i = 1;i<=3;i++)
                             .box-blog
-                                img(src="image/images/blog/blog"+i+".webp", alt="")
+                                .image
+                                    img(src="image/images/blog/blog"+i+".webp", alt="")
                                 .content-blog
                                     ul.blog-meta
                                         -let icons=["fa fa-user","far fa-clock","fa fa-comments"];

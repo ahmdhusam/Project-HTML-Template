@@ -1,6 +1,6 @@
 # Project-HTML-Template
 
-#HTML , SCSS , JAVASCRIPT
+#pugJS , SCSS , JAVASCRIPT
 
 ### Demo
 
