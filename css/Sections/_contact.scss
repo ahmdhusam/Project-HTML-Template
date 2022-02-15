@@ -1,0 +1,92 @@
+.contact {
+    @include parent-without-shadow();
+    .main-contact {
+        .head-contact {
+            @include head();
+        }
+        .boxs-contact {
+            display: grid;
+            @include autofill;
+            gap: 1rem;
+            .box-contact {
+                text-align: center;
+                > *:not(:last-child) {
+                    margin-bottom: 25px;
+                }
+                #Phone {
+                    animation-name: phone;
+                    animation-duration: 0.2s;
+                    animation-direction: alternate;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                    animation-play-state: paused;
+                }
+                #Email {
+                    animation-name: email;
+                    animation-duration: 1s;
+                    animation-direction: alternate;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                    animation-play-state: paused;
+                }
+                #Address {
+                    animation-name: address;
+                    animation-duration: 1s;
+                    animation-direction: alternate;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                    animation-play-state: paused;
+                }
+                i {
+                    color: $maincolor;
+                    font-size: 40px;
+                }
+                .title {
+                    font-size: 20px;
+                }
+                span {
+                    color: $main-P;
+                }
+            }
+        }
+    }
+    .form-contact {
+        width: 70%;
+        margin: 70px auto 0px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        > * {
+            padding: 10px;
+            border: none;
+            border-bottom: solid 2px #eee;
+            background-color: #f4f4f4;
+        }
+        .Name,
+        .Email {
+            width: 100%;
+            @include md {
+                width: calc((100% - 10px) / 2);
+            }
+        }
+        .Subject {
+            width: 100%;
+        }
+        .Message {
+            width: 100%;
+            height: 80px;
+            resize: none;
+        }
+        .send {
+            padding: 12px 40px;
+            margin: 15px auto;
+            cursor: pointer;
+            color: white;
+            background-color: $maincolor;
+            border-radius: 5px;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
