@@ -24,10 +24,3 @@ button {
         opacity: 0.9;
     }
 }
-
-body {
-    > div:not(#Home, #About, #Portfolio, #Services, .after-services, .number-services, #Prices, #testimonial, #Team, #Blog, .contact),
-    footer {
-        display: none;
-    }
-}

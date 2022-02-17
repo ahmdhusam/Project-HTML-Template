@@ -6,7 +6,7 @@
         }
         .boxs-contact {
             display: grid;
-            @include autofill;
+            @include autofit;
             gap: 1rem;
             .box-contact {
                 text-align: center;

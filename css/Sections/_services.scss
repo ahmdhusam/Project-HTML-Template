@@ -6,7 +6,7 @@
         }
         .boxs-services {
             display: grid;
-            @include autofill;
+            @include autofit;
             gap: 20px;
             .box-services {
                 box-shadow: $shadow-box;

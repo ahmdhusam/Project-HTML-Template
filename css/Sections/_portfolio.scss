@@ -7,7 +7,7 @@
         .boxs-featured {
             display: grid;
             @include sm {
-                @include autofill(19rem);
+                @include autofit(19rem);
             }
             .box-featured {
                 position: relative;

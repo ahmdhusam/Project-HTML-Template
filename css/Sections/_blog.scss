@@ -6,7 +6,7 @@
         }
         .boxs-blog {
             display: grid;
-            @include autofill(17rem);
+            @include autofit(17rem);
             gap: 2rem;
 
             .box-blog {

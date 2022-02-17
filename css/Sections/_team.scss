@@ -7,7 +7,7 @@
         }
         .boxs-team {
             display: grid;
-            @include autofill(17rem);
+            @include autofit(17rem);
             gap: 1.2rem;
             .box-team {
                 padding: 30px 10px;

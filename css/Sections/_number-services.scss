@@ -10,7 +10,7 @@
         position: relative;
         z-index: 3;
         display: grid;
-        @include autofill(13rem);
+        @include autofit(13rem);
         gap: 2rem;
         .box-number {
             text-align: center;
