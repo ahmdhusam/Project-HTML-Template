@@ -17,7 +17,6 @@
     .boxs-section {
         position: relative;
         z-index: 3;
-        display: grid;
         @include autofit(19rem);
         gap: 2rem;
 

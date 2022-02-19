@@ -24,6 +24,7 @@
 }
 
 @mixin autofit($min: 18rem) {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
 }
 

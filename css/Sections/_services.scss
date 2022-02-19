@@ -5,7 +5,6 @@
             @include head;
         }
         .boxs-services {
-            display: grid;
             @include autofit;
             gap: 20px;
             .box-services {

@@ -9,7 +9,6 @@
     .boxs-number {
         position: relative;
         z-index: 3;
-        display: grid;
         @include autofit(13rem);
         gap: 2rem;
         .box-number {

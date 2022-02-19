@@ -2,7 +2,9 @@
 @import "./helpers/mixins";
 
 @import "./Layout/global";
+
 @import "./Layout/header";
+
 @import "./Sections/landing";
 @import "./Sections/about";
 @import "./Sections/portfolio";
@@ -14,58 +16,5 @@
 @import "Sections/team";
 @import "Sections/blog";
 @import "Sections/contact";
+
 @import "Layout/footer";
-
-#gotop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    a {
-        display: block;
-        background-color: $maincolor;
-        padding: 15px;
-        border-radius: 12px;
-        text-align: center;
-        color: white;
-        font-size: 20px;
-        width: 50px;
-        height: 50px;
-        &:hover {
-            opacity: 0.8;
-        }
-    }
-}
-
-@keyframes phone {
-    0% {
-        transform: rotatez(5deg);
-    }
-
-    50% {
-        transform: rotatez(-5deg);
-    }
-    100% {
-        transform: rotatez(5deg);
-    }
-}
-@keyframes email {
-    0% {
-        transform: scale(1, 1);
-    }
-
-    50% {
-        transform: scaleX(0.8) scaley(1.2);
-    }
-    100% {
-        transform: scaleX(1.2);
-    }
-}
-@keyframes address {
-    from {
-        transform: translateY(6px) scaley(0.9);
-    }
-    100% {
-        transform: translateY(0%) scaley(1);
-    }
-}
